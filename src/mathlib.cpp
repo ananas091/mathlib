@@ -2,6 +2,8 @@
 #include <math.h>
 #include <float.h>
 
+namespace mathlib {
+
 MathError math_add(double a, double b, double* result) {
     if (!result) {
         return MATH_ERR_INVALID_ARG;
@@ -159,4 +161,6 @@ const char* math_error_string(MathError err) {
         default:
             return "Unknown error";
     }
-}
+}    
+
+} // namespace mathlib

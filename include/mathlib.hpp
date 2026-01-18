@@ -1,5 +1,7 @@
 #pragma once
 
+namespace mathlib{
+
 typedef enum {
     MATH_OK = 0,
     MATH_ERR_OVERFLOW,
@@ -15,3 +17,6 @@ MathError math_pow(double base, double exp, double* result);
 MathError math_factorial(double n, double* result);
 
 const char* math_error_string(MathError err);
+
+} // namespace mathlib
+
